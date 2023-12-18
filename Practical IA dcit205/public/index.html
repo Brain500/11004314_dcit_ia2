@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGMC Medical Record System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>UGMC Medical Record System</h1>
+
+    
+    <form id="patientRegistrationForm">
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" required>
+        
+        <label for="otherNames">Other Names:</label>
+        <input type="text" id="otherNames" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            
+        </select>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" required>
+
+        <label for="residentialAddress">Residential Address:</label>
+        <textarea id="residentialAddress" rows="4" required></textarea>
+
+        <label for="emergencyName">Emergency Contact Name:</label>
+        <input type="text" id="emergencyName" required>
+
+        <label for="emergencyContact">Emergency Contact Number:</label>
+        <input type="tel" id="emergencyContact" required>
+
+        <label for="relationship">Relationship with Patient:</label>
+        <input type="text" id="relationship" required>
+
+        <button type="button" onclick="registerPatient()">Register Patient</button>
+    </form>
+
+    
+    <form id="encounterForm">
+        <label for="encounterPatientID">Patient ID:</label>
+        <input type="text" id="encounterPatientID" required>
+
+        <label for="encounterDate">Date and Time:</label>
+        <input type="datetime-local" id="encounterDate" required>
+
+        <label for="encounterType">Type of Encounter:</label>
+        <select id="encounterType" required>
+            <option value="emergency">Emergency</option>
+            <option value="opd">OPD</option>
+            <option value="specialistCare">Specialist Care</option>
+        
+        </select>
+
+        <button type="button" onclick="startEncounter()">Start Encounter</button>
+    </form>
+
+    <form id="vitalsForm">
+        <label for="vitalsPatientID">Patient ID:</label>
+        <input type="text" id="vitalsPatientID" required>
+
+        <label for="bloodPressure">Blood Pressure:</label>
+        <input type="text" id="bloodPressure" required>
+
+        <label for="temperature">Temperature:</label>
+        <input type="text" id="temperature" required>
+
+        <label for="pulse">Pulse:</label>
+        <input type="text" id="pulse" required>
+
+        <label for="spO2">SP02:</label>
+        <input type="text" id="spO2" required>
+
+        <button type="button" onclick="submitVitals()">Submit Vitals</button>
+    </form>
+
+    <div id="patientList"></div>
+
+    <div id="patientDetails"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
